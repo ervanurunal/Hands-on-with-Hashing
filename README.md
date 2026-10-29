@@ -1,4 +1,4 @@
-## Hands-on with Hashing: MD5, SHA-1, and SHA-256
+## Hands-on with Hashing
 
 ---
 ---
@@ -39,7 +39,7 @@ Hashing, File Integrity, MD5, SHA-1, SHA-256, Hash Verification, Linux Command L
 ---
 ---
 
-## 1. Creating a Text File
+### 1. Creating a Text File
 
 First, I created a text file named `file.txt` containing a line of sample text.
 
@@ -52,7 +52,7 @@ echo "This is a sample text file." > file.txt
 ---
 ---
 
-## 2. Generating an MD5 Hash
+### 2. Generating an MD5 Hash
 
 Generate an MD5 checksum and save it to a file:
 
@@ -78,7 +78,7 @@ c7a8ef893898f9a6b380eb4ec1e87113  file.txt
 
 The hash value depends on the exact contents of the file. My output may differ if I use a different message.
 
-### Verify the MD5 Checksum
+#### Verify the MD5 Checksum
 
 Run:
 
@@ -99,7 +99,7 @@ file.txt: OK
 ---
 ---
 
-## 3. Creating and Modifying a Copy of the File
+### 3. Creating and Modifying a Copy of the File
 
 Create a copy of the original file:
 
@@ -123,7 +123,7 @@ If the copied file has exactly the same contents as the original, the hash value
 
 **Key concept:** Hashes are calculated from file contents, not from the filename alone.
 
-### Modify the Copy
+#### Modify the Copy
 
 Open the copied file:
 
@@ -141,7 +141,7 @@ In `nano`:
 
 Adding a space changes the file contents.
 
-### Verify the Modified File
+#### Verify the Modified File
 
 Check the original checksum against the modified file:
 
@@ -168,7 +168,7 @@ md5sum badfile.txt
 ---
 ---
 
-## 4. Generating a SHA-1 Hash
+### 4. Generating a SHA-1 Hash
 
 The `shasum` utility can generate and verify SHA-family checksums.
 
@@ -197,7 +197,7 @@ file.txt: OK
 ---
 ---
 
-## 5. Generating a SHA-256 Hash
+### 5. Generating a SHA-256 Hash
 
 SHA-256 is another SHA-family algorithm and produces a 256-bit digest.
 
@@ -215,7 +215,7 @@ cat file.txt.sha256
 
 ![10](https://i.imgur.com/Dr8Y7V3.png)
 
-### Verify the SHA-256 Checksum
+#### Verify the SHA-256 Checksum
 
 Run:
 
@@ -236,7 +236,7 @@ file.txt: OK
 ---
 ---
 
-## 6. Comparing the Hashing Algorithms
+### 6. Comparing the Hashing Algorithms
 
 | Algorithm | Digest size | Security considerations                                                          |
 | --------- | ----------: | -------------------------------------------------------------------------------- |
@@ -249,7 +249,7 @@ The key lesson is that a longer digest is not the only measure of security. The 
 ---
 ---
 
-## Key Concepts Learned
+### Key Concepts Learned
 
 * **Hashing:** Transforming data into a fixed-length digest.
 * **Checksum:** A stored hash value used to check whether data matches an expected value.
@@ -261,7 +261,7 @@ The key lesson is that a longer digest is not the only measure of security. The 
 ---
 ---
 
-## Cybersecurity Relevance
+### Cybersecurity Relevance
 
 Hashing is useful in many cybersecurity and IT support tasks:
 
@@ -276,7 +276,7 @@ Hashing is useful in many cybersecurity and IT support tasks:
 ---
 ---
 
-## Troubleshooting Notes
+### Troubleshooting Notes
 
 | Problem                      | Possible cause or solution                                                 |
 | ---------------------------- | -------------------------------------------------------------------------- |
@@ -289,7 +289,7 @@ Hashing is useful in many cybersecurity and IT support tasks:
 ---
 ---
 
-## Skills Demonstrated
+### Skills Demonstrated
 
 * Linux command-line usage
 * File creation and inspection
@@ -303,7 +303,7 @@ Hashing is useful in many cybersecurity and IT support tasks:
 ---
 ---
 
-## Final Takeaway
+### Final Takeaway
 
 This lab demonstrated how hashing can help verify file integrity. By generating checksums, modifying a file, and repeating verification, I observed how changes to file contents affect the resulting digest.
 
